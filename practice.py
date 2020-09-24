@@ -2,4 +2,6 @@ print('Hello world')
 
 import os
 
-os.system('calc')
+dir = os.curdir 
+
+print(dir)
