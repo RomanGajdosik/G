@@ -1,0 +1,3 @@
+msg='NAZDAREK '
+
+print(msg)
