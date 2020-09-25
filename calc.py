@@ -26,11 +26,7 @@ while True:
             numbList+=[int(cislo)]
         else:
             break    
-
-    except IndexError as err:
-        print(err)
-        numbList=[0]
-        continue
+   
 if numbList:
     cnt=countList(numbList)
     max = max(numbList)
