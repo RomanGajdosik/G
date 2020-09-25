@@ -20,20 +20,23 @@ numbList=[]
 
 while True:
 
-    cislo= input ("Zadaj cele platne cislo alebo Enter pre ukoncenie ")
-    if cislo : 
-        numbList+=[int(cislo)]
-    else:
-        break    
+    try:
+        cislo= input ("Zadaj cele platne cislo alebo Enter pre ukoncenie ")
+        if cislo: 
+            numbList+=[int(cislo)]
+        else:
+            break    
 
-cnt=countList(numbList)
-max = max(numbList)
-min = min(numbList)
-average= avg(numbList)
-print("mnozina cisel je ", numbList)
-print("Pocet cisel v mnozine je ", len(numbList))
-print("Sucet cisiel v mnozine je ", cnt)
-print("Najvacsie cislo v mnozine je ", max)
-print("Najmensie cislo v mnozine je ", min)
-print("Priemer cisel v mnozine je ", average)
-
+    except IndexError as err:
+        print(err)
+        numbList=[0]
+        continue
+if numbList:
+    cnt=countList(numbList)
+    max = max(numbList)
+    min = min(numbList)
+    average= avg(numbList)
+    print(numbList,"mnozina cisel  ",len(numbList), " = Pocet cisel v mnozine ",cnt," = Sucet cisiel v mnozine ",max," = Najvacsie cislo v mnozine ",min,"= Najmensie cislo v mnozine ",average,"= Priemer cisel v mnozine ")
+    #print("Pocet cisel v mnozine je ", len(numbList))
+    
+else: print("ZIADNE CISLO ZADANE ****** KONIEC ")    
