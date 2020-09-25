@@ -1,6 +1,10 @@
 s = input ('Zadaj cele cislo ')
+try:
+       
+    
+    i=int(s)
+    print ('Zadane platne cele cislo ', i )
 
-i=int(s)
+except ValueError as err:
+    print(err)
 
-#vysl = i/5 
-print ('Zadane platne cele cislo ', i/5 )
