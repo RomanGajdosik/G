@@ -14,6 +14,22 @@ def avg (list):
     funkc na spocitanie priemeru 
     """
     return sum(list)/len(list)
+def median (zoznam):
+    """
+    vypoicita strednu hodnotu zo zadaneho listu celych cisiel 
+    """
+    zoznam.sort()
+    num=0
+    zCount = len(zoznam)
+    
+    if (zCount%2):
+    
+         num=zoznam[zCount//2]
+
+    else:
+         
+         num=99999    
+    return num
 
 
 numbList=[]
@@ -32,7 +48,8 @@ if numbList:
     max = max(numbList)
     min = min(numbList)
     average= avg(numbList)
+    median=median(numbList)
     print(numbList,"mnozina cisel  ",len(numbList), "Pocet cisel v mnozine ",cnt,"Sucet cisiel v mnozine ",max,"Najvacsie cislo v mnozine ",min,"Najmensie cislo v mnozine ",average,"Priemer cisel v mnozine ",sep='\n')
-    #print("Pocet cisel v mnozine je ", len(numbList))
+    print("Median  ", median )
     
 else: print("ZIADNE CISLO ZADANE ****** KONIEC ")    
