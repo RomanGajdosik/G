@@ -13,7 +13,7 @@ def avg (list):
     """
     funkc na spocitanie priemeru 
     """
-    return sum(list)/len(list)
+    return sum(list)//len(list)
 def median (zoznam):
     """
     vypoicita strednu hodnotu zo zadaneho listu celych cisiel 
@@ -27,8 +27,10 @@ def median (zoznam):
          num=zoznam[zCount//2]
 
     else:
-         
-         num=99999    
+         first=zoznam[zCount//2]
+         second=zoznam[(zCount//2)-1]
+         suma=[first,second]
+         num=avg(suma)    
     return num
 
 
